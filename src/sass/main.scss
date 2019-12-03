@@ -1,7 +1,9 @@
 @charset "utf-8";
-
+@import "~@fortawesome/fontawesome-free/css/all.css";
 //GENERAL
+/*reset*/
 
+@import "base/reset";
 ///variables
 
 @import "helpers/variables";
@@ -10,14 +12,16 @@
 
 @import "helpers/mixins";
 
-/*reset*/
-
-@import "base/reset";
-
 /*typography*/
 
 @import "base/typography";
 
-/*COMPONENTS*/
+@import "components/button";
 
-/*general*/
+@import "components/logo";
+
+@import "layout/general";
+
+@import "layout/header";
+
+@import "layout/nav";

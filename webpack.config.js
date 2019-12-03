@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const GoogleFontsPlugin = require("google-fonts-plugin");
 
 module.exports = {
   entry: "./src/js/main.js",
+  watch: true,
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
@@ -25,7 +25,7 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpe?g|gif|svg)$/,
+        test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
         use: [
           {
             loader: "file-loader",
@@ -76,7 +76,6 @@ module.exports = {
       }
     }),
     new CopyPlugin([{ from: "./src/assets", to: "assets" }]),
-    new GoogleFontsPlugin("./config.json"),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     })
