@@ -1,0 +1,12 @@
+{
+  "google-fonts-plugin": {
+    "fonts": [
+      {
+        "family": "Maven Pro",
+        "variants": ["400", "500", "700"],
+        "subsets": ["latin"]
+      }
+    ],
+    "formats": ["woff", "woff2"]
+  }
+}
