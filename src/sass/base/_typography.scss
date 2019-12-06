@@ -2,6 +2,7 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   font-family: $base-font-family;
+  color: #4f506f;
 
   @media #{$mq-medium} {
     font-size: $base-font-size * 1;

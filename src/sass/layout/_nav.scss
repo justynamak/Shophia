@@ -4,20 +4,98 @@
   align-items: center;
   justify-content: flex-end;
 
+  @media all and (max-width: #{$bp-large}) {
+    justify-content: flex-start;
+  }
+
   &__list {
     display: flex;
     align-items: center;
     height: 100%;
+    flex-direction: row;
+
+    @media all and (max-width: #{$bp-large}) {
+      flex-direction: column;
+      background: #ffffff;
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: scaleY(1);
+      transform-origin: top;
+      transition: 0.2s transform ease-in-out;
+    }
   }
   &__item {
     padding-right: 2rem;
+
+    @media all and (max-width: #{$bp-large}) {
+      padding: 0;
+    }
   }
   &__link {
     color: $color-secondary;
     padding: 0.5rem 0.7rem;
+    display: block;
+
+    @media all and (max-width: #{$bp-large}) {
+      color: $color-primary;
+      padding: 1rem 0;
+    }
 
     &--active {
       border-bottom: 1px solid $color-secondary;
     }
+  }
+}
+
+.nav-icon {
+  display: none;
+
+  @media all and (max-width: #{$bp-large}) {
+    display: block;
+    margin: 1em;
+    width: 40px;
+    cursor: pointer;
+    order: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+}
+
+.nav-icon:after,
+.nav-icon:before,
+.nav-icon div {
+  background-color: #fff;
+  border-radius: 3px;
+  content: "";
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: all 0.2s ease-in-out;
+}
+.animate-icon:after,
+.animate-icon:before,
+.animate-icon div {
+  background-color: $color-primary;
+}
+.animate-icon:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.animate-icon:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+.scale-icon {
+  transform: scale(0);
+}
+
+@media all and (max-width: #{$bp-large}) {
+  .collapsed-menu {
+    transform: scaleY(0) !important;
   }
 }

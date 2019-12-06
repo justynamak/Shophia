@@ -1,0 +1,19 @@
+.section {
+  padding: 2rem 0;
+  height: 100vh;
+
+  &__text-column {
+    width: 30%;
+  }
+}
+.why-choose-us {
+  background: url("../assets/home/phones.png");
+  background-size: cover;
+  background-position: center;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

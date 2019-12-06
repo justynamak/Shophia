@@ -2,21 +2,39 @@
   height: 100vh;
   background: url("../assets/home/Background.jpg");
   background-size: cover;
-  background-position: center top;
-  overflow-x: hidden;
+  background-position: left;
+  overflow: hidden;
   color: #fff;
+  min-height: 1080px;
+
+  @media all and (max-width: #{$bp-large}) {
+    background: url("../assets/home/background-mobile.jpg");
+    min-height: 100vh;
+  }
 
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 90px;
+
+    @media all and (max-width: #{$bp-large}) {
+      flex-direction: row-reverse;
+    }
   }
   &__btn {
     margin-left: 2rem;
+
+    @media all and (max-width: #{$bp-large}) {
+      display: none;
+    }
   }
   &__logo {
     color: $color-secondary;
+
+    @media all and (max-width: #{$bp-large}) {
+      order: -1;
+    }
   }
 
   &__container {
@@ -31,15 +49,14 @@
     justify-content: center;
     flex-direction: column;
     width: 35%;
+    margin-top: -10%;
+
+    @media all and (max-width: #{$bp-large}) {
+      width: 100%;
+    }
   }
   &__nav {
     flex: 1;
-  }
-  &__pre-title {
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.0625rem;
   }
 
   &__title {
