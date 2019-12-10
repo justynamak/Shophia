@@ -1,19 +1,161 @@
 .section {
   padding: 2rem 0;
-  height: 100vh;
 
-  &__text-column {
-    width: 30%;
-  }
-}
-.why-choose-us {
-  background: url("../assets/home/phones.png");
-  background-size: cover;
-  background-position: center;
-
-  &__container {
+  &__title {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+  }
+  &__title-heading {
+    font-family: $secondary-font-family;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.8rem;
+    text-align: center;
+    flex: 2;
+  }
+  &__title-line {
+    flex: 3;
+    height: 1px;
+    background: lightgray;
+  }
+
+  &__grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+      "shoes model jewerelly1"
+      "jewerelly2 model wallet";
+    margin: 1.5rem 0;
+
+    @media all and (max-width: #{$bp-large}) {
+      grid-template-columns: 1fr 1.1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+        "shoes model"
+        "jewerelly2 model"
+        "jewerelly1 wallet";
+    }
+  }
+  &__grid-element {
+    height: 100%;
+    position: relative;
+  }
+  &__grid-element--shoes {
+    grid-area: shoes;
+  }
+  &__grid-element--model {
+    grid-area: model;
+  }
+  &__grid-element--element--jewerelly1 {
+    grid-area: jewerelly1;
+  }
+  &__grid-element--jewerelly2 {
+    grid-area: jewerelly2;
+  }
+  &__grid-element--wallet {
+    grid-area: wallet;
+  }
+  &__frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  &__frame-outside {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+  &__frame-inside {
+    width: 85%;
+    height: 85%;
+    border: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.4s all ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+
+    &:hover {
+      border: 1px solid transparent;
+      background: #a9a9a959;
+    }
+    &:hover .section__frame-plus {
+      opacity: 1;
+    }
+    &:hover .section__frame-btn {
+      opacity: 1;
+    }
+  }
+  &__frame-plus {
+    color: lightgray;
+    font-size: 6rem;
+    font-weight: 300;
+    opacity: 0;
+    transition: 0.4s opacity ease-in-out;
+    position: relative;
+    z-index: 4;
+  }
+  &__frame-btn {
+    opacity: 0;
+    width: 120px;
+    height: 40px;
+    font-size: 0.85rem;
+    transition: 0.4s opacity ease-in-out;
+    position: relative;
+    z-index: 4;
+  }
+}
+.offer {
+  display: flex;
+  height: 150px;
+  color: #fff;
+
+  @media all and (max-width: #{$bp-medium}) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  &__box {
+    height: 100px;
+    position: relative;
+
+    @media all and (max-width: #{$bp-medium}) {
+      margin: 1rem 0;
+    }
+  }
+  &__shape {
+    min-height: 100px;
+    &--reverse {
+      transform: rotate(180deg);
+    }
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
   }
 }

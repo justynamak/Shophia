@@ -1,18 +1,9 @@
 .nav {
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  @media all and (max-width: #{$bp-large}) {
-    justify-content: flex-start;
-  }
-
   &__list {
     display: flex;
     align-items: center;
     height: 100%;
-    flex-direction: row;
 
     @media all and (max-width: #{$bp-large}) {
       flex-direction: column;
@@ -25,31 +16,21 @@
       transform: scaleY(1);
       transform-origin: top;
       transition: 0.2s transform ease-in-out;
+      z-index: 1000;
     }
   }
-  &__item {
-    padding-right: 2rem;
 
+  &__item {
     @media all and (max-width: #{$bp-large}) {
-      padding: 0;
+      padding: 2rem 0;
     }
   }
   &__link {
-    color: $color-secondary;
-    padding: 0.5rem 0.7rem;
-    display: block;
-
-    @media all and (max-width: #{$bp-large}) {
-      color: $color-primary;
-      padding: 1rem 0;
-    }
-
-    &--active {
-      border-bottom: 1px solid $color-secondary;
-    }
+    padding-right: 1.5rem;
+    font-family: $secondary-font-family;
+    font-size: 1.1rem;
   }
 }
-
 .nav-icon {
   display: none;
 
@@ -60,16 +41,17 @@
     cursor: pointer;
     order: -1;
     position: fixed;
-    top: 0;
+    top: 80px;
     left: 0;
-    z-index: 1000;
+    z-index: 1001;
+    transform: translateY(-50%);
   }
 }
 
 .nav-icon:after,
 .nav-icon:before,
 .nav-icon div {
-  background-color: #fff;
+  background-color: #000;
   border-radius: 3px;
   content: "";
   display: block;
@@ -77,11 +59,7 @@
   margin: 7px 0;
   transition: all 0.2s ease-in-out;
 }
-.animate-icon:after,
-.animate-icon:before,
-.animate-icon div {
-  background-color: $color-primary;
-}
+
 .animate-icon:before {
   transform: translateY(12px) rotate(135deg);
 }

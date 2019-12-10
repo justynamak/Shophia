@@ -1,74 +1,66 @@
-.header {
-  height: 100vh;
-  background: url("../assets/home/Background.jpg");
-  background-size: cover;
-  background-position: left;
-  overflow: hidden;
-  color: #fff;
-  min-height: 1080px;
+.header-top {
+  width: 100%;
+  height: 50px;
+  background: #f2f2f2;
 
-  @media all and (max-width: #{$bp-large}) {
-    background: url("../assets/home/background-mobile.jpg");
-    min-height: 100vh;
-  }
-
-  &__top {
+  & > .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
-
-    @media all and (max-width: #{$bp-large}) {
-      flex-direction: row-reverse;
-    }
-  }
-  &__btn {
-    margin-left: 2rem;
-
-    @media all and (max-width: #{$bp-large}) {
-      display: none;
-    }
-  }
-  &__logo {
-    color: $color-secondary;
-
-    @media all and (max-width: #{$bp-large}) {
-      order: -1;
-    }
   }
 
-  &__container {
+  &__list {
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
   }
+  &__item {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      height: 60%;
+      width: 2px;
+      background: darkgray;
+      margin-left: 1rem;
+      display: inline-block;
+    }
+  }
+
+  &__link {
+    font-size: 0.85rem;
+    color: darkgray;
+  }
+}
+.header-middle {
+  height: 80px;
+  position: relative;
+
   &__content {
-    flex: 3;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 35%;
-    margin-top: -10%;
-
-    @media all and (max-width: #{$bp-large}) {
-      width: 100%;
-    }
-  }
-  &__nav {
-    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
   }
 
-  &__title {
-    font-weight: 500;
-    font-size: 2.7rem;
-    line-height: 1.3;
-    margin-bottom: 1rem;
-  }
-  &__buttons {
+  &__list {
     display: flex;
+    height: 100%;
   }
-  &__button {
-    margin: 1.5rem 0.5rem 0 0;
+  &__link {
+    padding: 0 1rem;
   }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.header {
+  height: 80vh;
+  min-height: 830px;
+  overflow: hidden;
+  width: 100%;
 }

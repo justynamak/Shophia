@@ -36,6 +36,16 @@ module.exports = {
           }
         ]
       },
+      // {
+      //   test: /\.(woff|woff2|ttf)$/,
+      //   use: {
+      //     loader: "url-loader",
+      //     options: {
+      //       name: "[name].[ext]",
+      //       outputPath: "fonts/"
+      //     }
+      //   }
+      // },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]

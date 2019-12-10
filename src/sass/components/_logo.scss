@@ -1,13 +1,6 @@
 .logo {
-  letter-spacing: 0.0925em;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-
-  &__title {
-    margin-left: 1rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
+  font-family: $logo-font-family;
+  font-size: 3rem;
+  width: 230px;
+  text-align: center;
 }
