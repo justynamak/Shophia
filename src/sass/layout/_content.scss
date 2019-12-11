@@ -4,6 +4,7 @@
   &__title {
     display: flex;
     align-items: center;
+    margin-bottom: 2.5rem;
   }
   &__title-heading {
     font-family: $secondary-font-family;
@@ -11,7 +12,7 @@
     font-style: italic;
     font-size: 1.8rem;
     text-align: center;
-    flex: 2;
+    flex: 3;
   }
   &__title-line {
     flex: 3;
@@ -70,6 +71,18 @@
     height: 100%;
     position: relative;
     cursor: pointer;
+
+    &:hover .section__frame-inside {
+      border: 2px solid transparent;
+      background: #a9a9a959;
+    }
+
+    &:hover .section__frame-plus {
+      opacity: 1;
+    }
+    &:hover .section__frame-btn {
+      opacity: 1;
+    }
   }
   &__frame-inside {
     width: 85%;
@@ -80,25 +93,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 0.4s all ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     z-index: 3;
-
-    &:hover {
-      border: 1px solid transparent;
-      background: #a9a9a959;
-    }
-    &:hover .section__frame-plus {
-      opacity: 1;
-    }
-    &:hover .section__frame-btn {
-      opacity: 1;
-    }
   }
   &__frame-plus {
-    color: lightgray;
+    color: black;
     font-size: 6rem;
     font-weight: 300;
     opacity: 0;
@@ -114,6 +112,59 @@
     transition: 0.4s opacity ease-in-out;
     position: relative;
     z-index: 4;
+  }
+  &__product-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+    justify-content: center;
+  }
+  &__product-discount {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &--important {
+      font-size: 3rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 1.1;
+    }
+
+    &--name-collection {
+      text-align: left;
+      font-family: $secondary-font-family;
+      left: 10%;
+      top: 35%;
+      transform: none;
+      text-transform: none;
+      color: black;
+      line-height: 1.6;
+      font-size: 1.3rem;
+
+      & > span {
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+    }
+  }
+  &__product-collection {
+    text-transform: uppercase;
+    color: white;
+    font-family: $base-font-family;
+    font-weight: 700;
+    font-size: 2.2rem !important;
   }
 }
 .offer {
@@ -157,5 +208,45 @@
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 700;
+  }
+}
+// summer collection
+
+.summer-collection {
+  &__grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 0.8rem;
+    border: 1px solid #f3f3f3;
+
+    @media all and (max-width: #{$bp-large}) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+
+    @media all and (max-width: #{$bp-medium}) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+}
+.brands {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    justify-items: center;
+
+    @media all and (max-width: #{$bp-large}) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+    }
+  }
+  &__logo {
+    max-width: 150px;
+    height: auto;
   }
 }

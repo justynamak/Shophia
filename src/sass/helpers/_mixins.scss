@@ -1,0 +1,17 @@
+@mixin position-element(
+  $top: 0,
+  $left: 0,
+  $transformX: 0,
+  $transformY: 0,
+  $z-index: 0
+) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate($transformX, $transformY);
+  z-index: $z-index;
+}
+@mixin full-size {
+  width: 100%;
+  height: 100%;
+}

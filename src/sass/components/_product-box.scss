@@ -1,0 +1,62 @@
+.product-box {
+  position: relative;
+  height: 100%;
+
+  &:hover .product-box__overlay {
+    opacity: 1 !important;
+  }
+  &:hover .product-box__btn {
+    border-bottom: 50px solid #f0975d;
+  }
+
+  &__overlay {
+    @include position-element($top: 0, $left: 0, $z-index: 3);
+    background: #0000007d;
+    @include full-size;
+    opacity: 0;
+    transition: 0.4s opacity ease-in-out;
+  }
+
+  &__content {
+    @include position-element($top: 0, $left: 0, $z-index: 4);
+    @include full-size;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__discount {
+    @include position-element($top: 5%, $left: 5%, $z-index: 4);
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #fdab12;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+
+    & > span {
+      font-size: 0.7rem;
+      display: inline-block;
+      margin-left: 0.15rem;
+    }
+  }
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 50px solid black;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    transition: 0.4s border-color ease-in-out;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
