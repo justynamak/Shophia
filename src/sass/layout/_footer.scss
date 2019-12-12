@@ -1,0 +1,67 @@
+.footer {
+  background: #000;
+
+  &__wrapper {
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__section-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+
+    &--word-spacing {
+      word-spacing: 0.4rem;
+    }
+    &--spacing-top {
+      margin-top: 1.5rem;
+    }
+  }
+  &__item {
+    padding: 0.4rem 0;
+  }
+  &__link {
+    color: #717171;
+  }
+  &__icon-circle {
+    background: #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+  }
+  &__icon {
+    font-size: 1.2rem;
+    color: #000;
+  }
+  &__icon-list {
+    width: 100%;
+    margin: 0.5rem 0 1.2rem 0;
+    display: flex;
+  }
+  &__icon-item {
+    padding-right: 0.6rem;
+  }
+  &__form {
+    border: 1px solid #717171;
+  }
+  &__input {
+    background: none;
+    border: none;
+    color: #717171;
+    padding: 0.7rem 1.5rem;
+    font-family: $base-font-family;
+    font-size: 0.85rem;
+  }
+  &__btn {
+    color: #fff;
+    text-transform: uppercase;
+    background: #717171;
+    padding: 0.7rem;
+    cursor: pointer;
+  }
+}
