@@ -3,6 +3,19 @@
   height: 50px;
   background: #f2f2f2;
 
+  @media all and (max-width: #{$bp-medium}) {
+    height: auto;
+    padding: 1rem 0;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media all and (max-width: #{$bp-medium}) {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
   & > .container {
     display: flex;
     justify-content: space-between;
@@ -11,6 +24,10 @@
 
   &__list {
     display: flex;
+
+    @media all and (max-width: #{$bp-medium}) {
+      padding: 1rem 0;
+    }
   }
   &__item {
     padding: 0 1rem;
@@ -36,6 +53,21 @@
 .header-middle {
   height: 80px;
   position: relative;
+  width: 100%;
+  z-index: 15;
+  background: white;
+
+  &--scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+  }
+
+  &__wrapper {
+    position: relative;
+    @include full-size;
+  }
 
   &__content {
     display: flex;

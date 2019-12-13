@@ -51,12 +51,16 @@
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
     height: 0;
-    width: 200px;
+    width: 75%;
     line-height: 50px;
     text-align: center;
     transition: 0.4s border-color ease-in-out;
     font-size: 0.85rem;
     font-weight: 700;
     cursor: pointer;
+
+    @media all and (max-width: #{$bp-medium}) {
+      width: 95%;
+    }
   }
 }
