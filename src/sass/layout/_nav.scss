@@ -6,7 +6,7 @@
     align-items: center;
     height: 100%;
 
-    @media all and (max-width: #{$bp-large}) {
+    @media all and (max-width: #{$bp-medium}) {
       flex-direction: column;
       background: #ffffff;
       width: 100%;
@@ -22,7 +22,7 @@
   }
 
   &__item {
-    @media all and (max-width: #{$bp-large}) {
+    @media all and (max-width: #{$bp-medium}) {
       padding: 2rem 0;
     }
   }
@@ -35,7 +35,7 @@
 .nav-icon {
   display: none;
 
-  @media all and (max-width: #{$bp-large}) {
+  @media all and (max-width: #{$bp-medium}) {
     display: block;
     width: 40px;
     cursor: pointer;
@@ -72,7 +72,7 @@
   transform: scale(0);
 }
 
-@media all and (max-width: #{$bp-large}) {
+@media all and (max-width: #{$bp-medium}) {
   .collapsed-menu {
     transform: scaleY(0) !important;
   }

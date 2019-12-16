@@ -7,6 +7,10 @@
   }
   &:hover .product-box__btn {
     border-bottom: 50px solid #f0975d;
+    @media all and (max-width: #{$bp-medium}) {
+      border-bottom: 0;
+      background: #f0975d;
+    }
   }
 
   &__overlay {
@@ -40,6 +44,14 @@
       font-size: 0.7rem;
       display: inline-block;
       margin-left: 0.15rem;
+
+      @media all and (max-width: #{$bp-medium}) {
+        font-size: 0.6rem;
+      }
+    }
+    @media all and (max-width: #{$bp-medium}) {
+      width: 2.5rem;
+      height: 2.5rem;
     }
   }
   &__btn {
@@ -60,7 +72,14 @@
     cursor: pointer;
 
     @media all and (max-width: #{$bp-medium}) {
-      width: 95%;
+      width: 100%;
+      height: auto;
+      background: black;
+      border-bottom: 0;
+      padding: 0.5rem 0;
+      line-height: 1.3;
+      width: 100%;
+      transition: 0.4s background-color ease-in-out;
     }
   }
 }

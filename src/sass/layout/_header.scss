@@ -27,6 +27,7 @@
 
     @media all and (max-width: #{$bp-medium}) {
       padding: 1rem 0;
+      flex-direction: column;
     }
   }
   &__item {
@@ -35,6 +36,11 @@
     align-items: center;
     text-transform: uppercase;
 
+    @media all and (max-width: #{$bp-medium}) {
+      padding: 1rem 0;
+      justify-content: center;
+    }
+
     &::after {
       content: "";
       height: 60%;
@@ -42,6 +48,10 @@
       background: darkgray;
       margin-left: 1rem;
       display: inline-block;
+
+      @media all and (max-width: #{$bp-medium}) {
+        content: "";
+      }
     }
   }
 
