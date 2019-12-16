@@ -19,11 +19,11 @@
     @include position-element($top: 0, $left: 0, $z-index: -1);
     min-height: 700px;
     width: 100%;
-    height: auto;
+    height: 100%;
     background-size: cover;
     background-position: top;
     opacity: 0;
-    transition: 0.4s opacity ease-in-out;
+    transition: 0.4s opacity ease-in;
 
     &--first {
       background-image: url("./../assets/img/bg.jpg");
@@ -33,7 +33,7 @@
     }
     &--third {
       background-image: url("./../assets/img/girl-2931287_1920.jpg");
-      // background-position: right;
+      background-position: right;
     }
     &--fourth {
       background-image: url("./../assets/img/girl-1828536_1920.jpg");
@@ -59,10 +59,11 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
+    background: #ffffffa6;
   }
 
   &__title {
-    color: #fff;
+    color: none;
     font-size: 1.5rem;
     letter-spacing: 0.0625em;
   }
