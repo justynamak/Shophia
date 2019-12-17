@@ -19,7 +19,7 @@
       transform-origin: top;
       transition: 0.2s transform ease-in-out;
       z-index: 1000;
-      overflow-y: scroll;
+      overflow: scroll;
     }
     & .header-top__item {
       display: none;
