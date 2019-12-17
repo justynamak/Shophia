@@ -30,10 +30,12 @@ body {
   width: 1rem;
   height: 1rem;
   transform: rotate(-45deg);
+  border: 1px solid #868686;
 
   &--golden {
     background: #d9bf8f;
     margin: 0 3rem;
+    border: none;
   }
 }
 
