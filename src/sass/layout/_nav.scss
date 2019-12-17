@@ -11,6 +11,7 @@
       background: #ffffff;
       width: 100%;
       height: auto;
+      min-height: 70vh;
       position: fixed;
       top: 0;
       left: 0;
@@ -18,18 +19,20 @@
       transform-origin: top;
       transition: 0.2s transform ease-in-out;
       z-index: 1000;
+      overflow-y: scroll;
     }
     & .header-top__item {
       display: none;
       @media all and (max-width: #{$bp-medium}) {
         display: block;
+        padding: 2vh 0;
       }
     }
   }
 
   &__item {
     @media all and (max-width: #{$bp-medium}) {
-      padding: 2rem 0;
+      padding: 4vh 0;
     }
   }
   &__link {

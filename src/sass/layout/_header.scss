@@ -26,8 +26,6 @@
     display: flex;
 
     @media all and (max-width: #{$bp-medium}) {
-      // padding: 1rem 0;
-      // flex-direction: column;
       display: none;
     }
   }
@@ -51,7 +49,7 @@
       display: inline-block;
 
       @media all and (max-width: #{$bp-medium}) {
-        content: "";
+        display: none;
       }
     }
   }
