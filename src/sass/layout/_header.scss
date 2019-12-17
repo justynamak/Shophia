@@ -26,8 +26,9 @@
     display: flex;
 
     @media all and (max-width: #{$bp-medium}) {
-      padding: 1rem 0;
-      flex-direction: column;
+      // padding: 1rem 0;
+      // flex-direction: column;
+      display: none;
     }
   }
   &__item {

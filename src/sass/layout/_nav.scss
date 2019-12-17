@@ -19,6 +19,12 @@
       transition: 0.2s transform ease-in-out;
       z-index: 1000;
     }
+    & .header-top__item {
+      display: none;
+      @media all and (max-width: #{$bp-medium}) {
+        display: block;
+      }
+    }
   }
 
   &__item {

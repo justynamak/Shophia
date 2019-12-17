@@ -38,6 +38,17 @@
         "jewerelly2 model"
         "jewerelly1 wallet";
     }
+    @media all and (max-width: #{$bp-small}) {
+      grid-template-columns: 350px;
+      grid-template-rows: repeat(5, auto);
+      justify-content: center;
+      grid-template-areas:
+        "shoes"
+        "model"
+        "jewerelly2"
+        "jewerelly1"
+        "wallet";
+    }
   }
   &__grid-element {
     height: 100%;
